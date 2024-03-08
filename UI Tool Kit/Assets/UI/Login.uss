@@ -33,3 +33,10 @@ Button:hover {
     transition-duration: 0.05s;
     transition-timing-function: ease;
 }
+
+.error-label {
+    white-space: normal;
+    -unity-text-align: upper-center;
+    -unity-font-style: normal;
+    color: rgb(125, 8, 8);
+}

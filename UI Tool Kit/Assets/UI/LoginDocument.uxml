@@ -14,6 +14,13 @@
                     <ui:TextField picking-mode="Ignore" label="Senha" name="passwordTextField" password="true" />
                     <ui:Button text="Login" parse-escape-sequences="true" display-tooltip-when-elided="true" name="loginButton" />
                     <ui:Button text="Cadastrar" parse-escape-sequences="false" display-tooltip-when-elided="true" name="registerButton" />
+                    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="errorLabel" class="error-label" />
+                </ui:VisualElement>
+                <ui:VisualElement name="panelResposta" style="flex-grow: 1;">
+                    <ui:TextField picking-mode="Ignore" label="Mensagem" name="inputTextField" style="white-space: normal; font-size: 40px; -unity-text-align: upper-center;" />
+                    <ui:Button text="Enviar Mensagem" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sendButton" style="font-size: 40px;" />
+                    <ui:Button text="capturar mensagem" parse-escape-sequences="true" display-tooltip-when-elided="true" name="getButton" style="font-size: 40px;" />
+                    <ui:Button text="Deletar mensagem" parse-escape-sequences="true" display-tooltip-when-elided="false" name="deleteButton" style="font-size: 40px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
