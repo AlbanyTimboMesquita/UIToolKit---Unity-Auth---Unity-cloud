@@ -1,0 +1,35 @@
+.game-title {
+    font-size: 50px;
+    align-self: center;
+    color: rgb(149, 2, 16);
+    -unity-font-definition: url("project://database/Assets/Fonts/ethnocentric.asset?fileID=11400000&guid=526cb0f30d9576449bf5a20d14bec8ea&type=2#ethnocentric");
+    -unity-text-outline-width: 8px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+}
+
+.login-panel {
+    -unity-font-definition: url("project://database/Assets/Fonts/nulshock.asset?fileID=11400000&guid=216afab19d088eb438945c23654e82ed&type=2#nulshock");
+    background-color: rgb(0, 0, 0);
+    width: 95%;
+    align-self: center;
+}
+
+.login-header-label {
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    align-self: center;
+    -unity-font-style: bold;
+    padding: 10px;
+}
+
+.login-body {
+    background-color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 20px;
+}
+
+Button:hover {
+    scale: 1.02 1.02;
+    transition-duration: 0.05s;
+    transition-timing-function: ease;
+}

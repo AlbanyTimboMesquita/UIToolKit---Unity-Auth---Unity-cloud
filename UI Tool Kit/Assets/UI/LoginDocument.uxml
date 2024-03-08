@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Login.uss?fileID=7433441132597879392&amp;guid=f7d8a30458a598a48b92bc0863581abd&amp;type=3#Login" />
+    <ui:VisualElement name="container" style="width: auto; height: auto; margin-top: 100px; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+        <ui:VisualElement name="header" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Guerra Espacial" parse-escape-sequences="true" display-tooltip-when-elided="true" name="titlelabel" class="game-title" />
+        </ui:VisualElement>
+        <ui:VisualElement name="body" style="flex-grow: 1;">
+            <ui:VisualElement name="panel" class="login-panel" style="flex-grow: 1;">
+                <ui:VisualElement name="panelHeader" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Login" parse-escape-sequences="true" display-tooltip-when-elided="true" name="loginLabel" class="login-header-label" />
+                </ui:VisualElement>
+                <ui:VisualElement name="panelBody" class="login-body" style="flex-grow: 1;">
+                    <ui:TextField picking-mode="Ignore" label="Email" name="emailTextField" />
+                    <ui:TextField picking-mode="Ignore" label="Senha" name="passwordTextField" password="true" />
+                    <ui:Button text="Login" parse-escape-sequences="true" display-tooltip-when-elided="true" name="loginButton" />
+                    <ui:Button text="Cadastrar" parse-escape-sequences="false" display-tooltip-when-elided="true" name="registerButton" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
