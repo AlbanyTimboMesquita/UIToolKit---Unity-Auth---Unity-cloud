@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private UIDocument uIDocument;
-    private Button loginButton ,registerButton,sendButton,getButton,deleteButton;
+    private Button loginButton ,registerButton,sendButton,getButton,deleteButton,pingButton;
     private TextField userNameField,passwordField,inputTextField;
     private Label errorLabel;
     
@@ -23,6 +24,7 @@ private void Awake() {
     sendButton = root.Q<Button>("sendButton");
     getButton = root.Q<Button>("getButton");
     deleteButton = root.Q<Button>("deleteButton");
+    pingButton = root.Q<Button>("pingButton");
 
     errorLabel=root.Q<Label>("errorLabel");
 
@@ -31,6 +33,7 @@ private void Awake() {
     sendButton.clicked += EnviarDados;
     getButton.clicked += RecuperarDados;
     deleteButton.clicked += DeletarDados;
+    pingButton.clicked+=ButtonPingNow;
 }
 
     private async void DeletarDados()
@@ -102,5 +105,34 @@ private void Awake() {
     {
         registerButton.SetEnabled(status);
         loginButton.SetEnabled(status);
+    }
+    public void ButtonPingNow(){
+        errorLabel.text="Tentando pingar...";
+        StartCoroutine(PingIP(inputTextField.text));
+
+
+    }
+    IEnumerator PingIP(string ip)
+    {
+          try
+        {
+
+            Ping ping = new Ping(ip);
+            yield return new WaitForSeconds(1f);
+            if (ping.isDone){
+                print("Tempo de resposta:"+ping.time);
+                //print("Tempo:"+ ping);
+                errorLabel.text="Sucesso!";
+            }else{
+                errorLabel.text="Sem resposta!";
+            }
+            /* var errorText=await CloudSaveScript.Instance.SaveData(inputTextField.value);
+            errorLabel.text=errorText; */
+        }
+        finally
+        {
+            
+        }
+        
     }
 }

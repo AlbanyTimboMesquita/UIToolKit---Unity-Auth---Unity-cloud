@@ -21,6 +21,7 @@
                     <ui:Button text="Enviar Mensagem" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sendButton" style="font-size: 40px;" />
                     <ui:Button text="capturar mensagem" parse-escape-sequences="true" display-tooltip-when-elided="true" name="getButton" style="font-size: 40px;" />
                     <ui:Button text="Deletar mensagem" parse-escape-sequences="true" display-tooltip-when-elided="false" name="deleteButton" style="font-size: 40px;" />
+                    <ui:Button text="Ping" parse-escape-sequences="true" display-tooltip-when-elided="false" name="pingButton" style="font-size: 40px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
